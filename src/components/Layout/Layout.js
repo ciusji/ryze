@@ -27,10 +27,10 @@ import Charts from "../../pages/charts";
 import { useLayoutState } from "../../context/LayoutContext";
 
 function Layout(props) {
-  var classes = useStyles();
+  const classes = useStyles();
 
   // global
-  var layoutState = useLayoutState();
+  const layoutState = useLayoutState();
 
   return (
     <div className={classes.root}>

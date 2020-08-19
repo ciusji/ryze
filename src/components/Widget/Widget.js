@@ -21,11 +21,11 @@ export default function Widget({
   header,
   ...props
 }) {
-  var classes = useStyles();
+  const classes = useStyles();
 
   // local
-  var [moreButtonRef, setMoreButtonRef] = useState(null);
-  var [isMoreMenuOpen, setMoreMenuOpen] = useState(false);
+  let [moreButtonRef, setMoreButtonRef] = useState(null);
+  let [isMoreMenuOpen, setMoreMenuOpen] = useState(false);
 
   return (
     <div className={classes.widgetWrapper}>

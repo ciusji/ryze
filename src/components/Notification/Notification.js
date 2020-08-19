@@ -42,8 +42,8 @@ const typesIcons = {
 };
 
 export default function Notification({ variant, ...props }) {
-  var classes = useStyles();
-  var theme = useTheme();
+  const classes = useStyles();
+  const theme = useTheme();
 
   const icon = getIconByType(props.type);
   const iconWithStyles = React.cloneElement(icon, {
@@ -111,7 +111,6 @@ export default function Notification({ variant, ...props }) {
   );
 }
 
-// ####################################################################
 function getIconByType(type = "offer") {
   return typesIcons[type];
 }

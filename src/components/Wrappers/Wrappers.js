@@ -9,7 +9,7 @@ import { useTheme, makeStyles } from "@material-ui/styles";
 import classnames from "classnames";
 
 // styles
-var useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   badge: {
     fontWeight: 600,
     height: 16,
@@ -18,9 +18,9 @@ var useStyles = makeStyles(theme => ({
 }));
 
 function Badge({ children, colorBrightness, color, ...props }) {
-  var classes = useStyles();
-  var theme = useTheme();
-  var Styled = createStyled({
+  const classes = useStyles();
+  const theme = useTheme();
+  const Styled = createStyled({
     badge: {
       backgroundColor: getColor(color, theme, colorBrightness),
     },
@@ -50,7 +50,7 @@ function Typography({
   color,
   ...props
 }) {
-  var theme = useTheme();
+  const theme = useTheme();
 
   return (
     <TypographyBase
@@ -67,9 +67,9 @@ function Typography({
 }
 
 function Button({ children, color, className, ...props }) {
-  var theme = useTheme();
+  const theme = useTheme();
 
-  var Styled = createStyled({
+  const Styled = createStyled({
     root: {
       color: getColor(color, theme),
     },
@@ -121,7 +121,6 @@ function Button({ children, color, className, ...props }) {
 
 export { Badge, Typography, Button };
 
-// ########################################################################
 
 function getColor(color, theme, brigtness = "main") {
   if (color && theme.palette[color] && theme.palette[color][brigtness]) {
@@ -163,7 +162,7 @@ function getFontSize(size, variant = "", theme) {
       break;
   }
 
-  var defaultSize =
+  const defaultSize =
     variant && theme.typography[variant]
       ? theme.typography[variant].fontSize
       : theme.typography.fontSize + "px";
@@ -172,7 +171,7 @@ function getFontSize(size, variant = "", theme) {
 }
 
 function createStyled(styles, options) {
-  var Styled = function(props) {
+  const Styled = function(props) {
     const { children, ...other } = props;
     return children(other);
   };
