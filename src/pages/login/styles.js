@@ -26,10 +26,6 @@ export default makeStyles(theme => ({
       display: "none",
     },
   },
-  logotypeImage: {
-    width: 165,
-    marginBottom: theme.spacing(4),
-  },
   logotypeText: {
     color: "white",
     fontWeight: 500,

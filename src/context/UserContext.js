@@ -17,8 +17,7 @@ function userReducer(state, action) {
 
 function UserProvider({ children }) {
   const [state, dispatch] = React.useReducer(userReducer, {
-    isAuthenticated: !!localStorage.getItem("id_token"),
-  });
+    isAuthenticated: !!localStorage.getItem("id_token")}, undefined);
 
   return (
     <UserStateContext.Provider value={state}>
@@ -52,14 +51,14 @@ function loginUser(dispatch, login, password, history, setIsLoading, setError) {
   setError(false);
   setIsLoading(true);
 
+  // login 和 password 具有实际变量之后才会执行
   if (!!login && !!password) {
     setTimeout(() => {
-      localStorage.setItem('id_token', 1)
-      setError(null)
-      setIsLoading(false)
-      dispatch({ type: 'LOGIN_SUCCESS' })
-
-      history.push('/app/dashboard')
+      localStorage.setItem('id_token', '1');
+      setError(null);
+      setIsLoading(false);
+      dispatch({ type: 'LOGIN_SUCCESS' });
+      history.push('/app/dashboard');
     }, 2000);
   } else {
     dispatch({ type: "LOGIN_FAILURE" });

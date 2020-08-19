@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { Inbox as InboxIcon } from "@material-ui/icons";
 import { Link } from "react-router-dom";
-import classnames from "classnames";
+import classNames from "classnames";
 
 // styles
 import useStyles from "./styles";
@@ -18,7 +18,7 @@ import useStyles from "./styles";
 // components
 import Dot from "../Dot";
 
-export default function SidebarLink({
+export default function SidebarLink ({
   link,
   icon,
   label,
@@ -39,7 +39,7 @@ export default function SidebarLink({
   if (type === "title")
     return (
       <Typography
-        className={classnames(classes.linkText, classes.sectionTitle, {
+        className={classNames(classes.linkText, classes.sectionTitle, {
           [classes.linkTextHidden]: !isSidebarOpened,
         })}
       >
@@ -57,7 +57,7 @@ export default function SidebarLink({
         to={link}
         className={classes.link}
         classes={{
-          root: classnames(classes.linkRoot, {
+          root: classNames(classes.linkRoot, {
             [classes.linkActive]: isLinkActive && !nested,
             [classes.linkNested]: nested,
           }),
@@ -65,7 +65,7 @@ export default function SidebarLink({
         disableRipple
       >
         <ListItemIcon
-          className={classnames(classes.linkIcon, {
+          className={classNames(classes.linkIcon, {
             [classes.linkIconActive]: isLinkActive,
           })}
         >
@@ -73,7 +73,7 @@ export default function SidebarLink({
         </ListItemIcon>
         <ListItemText
           classes={{
-            primary: classnames(classes.linkText, {
+            primary: classNames(classes.linkText, {
               [classes.linkTextActive]: isLinkActive,
               [classes.linkTextHidden]: !isSidebarOpened,
             }),
@@ -94,7 +94,7 @@ export default function SidebarLink({
         disableRipple
       >
         <ListItemIcon
-          className={classnames(classes.linkIcon, {
+          className={classNames(classes.linkIcon, {
             [classes.linkIconActive]: isLinkActive,
           })}
         >
@@ -102,7 +102,7 @@ export default function SidebarLink({
         </ListItemIcon>
         <ListItemText
           classes={{
-            primary: classnames(classes.linkText, {
+            primary: classNames(classes.linkText, {
               [classes.linkTextActive]: isLinkActive,
               [classes.linkTextHidden]: !isSidebarOpened,
             }),

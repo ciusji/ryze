@@ -16,7 +16,7 @@ import {
   Publish as UploadIcon,
 } from "@material-ui/icons";
 import { useTheme } from "@material-ui/styles";
-import classnames from "classnames";
+import classNames from "classnames";
 import tinycolor from "tinycolor2";
 
 // styles
@@ -60,7 +60,7 @@ export default function Notification({ variant, ...props }) {
 
   return (
     <div
-      className={classnames(classes.notificationContainer, props.className, {
+      className={classNames(classes.notificationContainer, props.className, {
         [classes.notificationContained]: variant === "contained",
         [classes.notificationContainedShadowless]: props.shadowless,
       })}
@@ -72,7 +72,7 @@ export default function Notification({ variant, ...props }) {
       }}
     >
       <div
-        className={classnames(classes.notificationIconContainer, {
+        className={classNames(classes.notificationIconContainer, {
           [classes.notificationIconContainerContained]: variant === "contained",
           [classes.notificationIconContainerRounded]: variant === "rounded",
         })}
@@ -89,7 +89,7 @@ export default function Notification({ variant, ...props }) {
       </div>
       <div className={classes.messageContainer}>
         <Typography
-          className={classnames({
+          className={classNames({
             [classes.containedTypography]: variant === "contained",
           })}
           variant={props.typographyVariant}

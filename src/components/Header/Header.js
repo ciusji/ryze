@@ -7,7 +7,6 @@ import {
   Menu,
   MenuItem,
   Fab,
-  Avatar,
 } from "@material-ui/core";
 import {
   Menu as MenuIcon,
@@ -202,8 +201,7 @@ export default function Header(props) {
           aria-controls="profile-menu"
           onClick={e => setProfileMenu(e.currentTarget)}
         >
-          {/*<AccountIcon classes={{ root: classes.headerIcon }}/>*/}
-          <Avatar classes={{ root: classes.headerIcon }}>J</Avatar>
+          <AccountIcon classes={{ root: classes.headerIcon }}/>
         </IconButton>
         <Menu
           id="mail-menu"

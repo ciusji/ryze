@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { MoreVert as MoreIcon } from "@material-ui/icons";
-import classnames from "classnames";
+import classNames from "classnames";
 
 // styles
 import useStyles from "./styles";
@@ -54,7 +54,7 @@ export default function Widget({
           )}
         </div>
         <div
-          className={classnames(classes.widgetBody, {
+          className={classNames(classes.widgetBody, {
             [classes.noPadding]: noBodyPadding,
             [bodyClass]: bodyClass,
           })}

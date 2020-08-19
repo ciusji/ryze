@@ -5,7 +5,7 @@ import {
   Redirect,
   withRouter,
 } from "react-router-dom";
-import classnames from "classnames";
+import classNames from "classnames";
 
 // styles
 import useStyles from "./styles";
@@ -38,7 +38,7 @@ function Layout(props) {
           <Header history={props.history} />
           <Sidebar />
           <div
-            className={classnames(classes.content, {
+            className={classNames(classes.content, {
               [classes.contentShift]: layoutState.isSidebarOpened,
             })}
           >

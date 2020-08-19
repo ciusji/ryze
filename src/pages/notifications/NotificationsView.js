@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, withStyles } from '@material-ui/core';
 import { Close as CloseIcon } from '@material-ui/icons';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import { ToastContainer } from 'react-toastify';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
@@ -30,15 +30,15 @@ const NotificationsPage = ({ classes, ...props}) => (
           <Typography>There are few position options available for notifications. You can click any of them to change notifications position:</Typography>
           <div className={classes.layoutContainer}>
             <div className={classes.layoutButtonsRow}>
-              <button onClick={() => props.changeNotificationPosition(0)} className={classnames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 0})} />
-              <button onClick={() => props.changeNotificationPosition(1)} className={classnames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 1})} />
-              <button onClick={() => props.changeNotificationPosition(2)} className={classnames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 2})} />
+              <button onClick={() => props.changeNotificationPosition(0)} className={classNames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 0})} />
+              <button onClick={() => props.changeNotificationPosition(1)} className={classNames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 1})} />
+              <button onClick={() => props.changeNotificationPosition(2)} className={classNames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 2})} />
             </div>
             <Typography className={classes.layoutText} size="md">Click any position</Typography>
             <div className={classes.layoutButtonsRow}>
-              <button onClick={() => props.changeNotificationPosition(3)} className={classnames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 3})} />
-              <button onClick={() => props.changeNotificationPosition(4)} className={classnames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 4})} />
-              <button onClick={() => props.changeNotificationPosition(5)} className={classnames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 5})} />
+              <button onClick={() => props.changeNotificationPosition(3)} className={classNames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 3})} />
+              <button onClick={() => props.changeNotificationPosition(4)} className={classNames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 4})} />
+              <button onClick={() => props.changeNotificationPosition(5)} className={classNames(classes.layoutButton, { [classes.layoutButtonActive]: props.notificationsPosition === 5})} />
             </div>
           </div>
         </Widget>
@@ -47,9 +47,9 @@ const NotificationsPage = ({ classes, ...props}) => (
         <Widget title="Notifications Types" disableWidgetMenu>
           <Typography>Different types of notifications for lost of use cases. Custom classes are also supported.</Typography>
           <div className={classes.buttonsContainer}>
-            <Button variant="contained" colortheme="primary" onClick={() => props.handleNotificationCall('info')} className={classnames(classes.notificationCallButton)}>Info Message</Button>
-            <Button variant="contained" colortheme="warning" onClick={() => props.handleNotificationCall('error')} className={classnames(classes.notificationCallButton)}>Error + Retry Message</Button>
-            <Button variant="contained" colortheme="success" onClick={() => props.handleNotificationCall('success')} className={classnames(classes.notificationCallButton)}>Success Message</Button>
+            <Button variant="contained" colortheme="primary" onClick={() => props.handleNotificationCall('info')} className={classNames(classes.notificationCallButton)}>Info Message</Button>
+            <Button variant="contained" colortheme="warning" onClick={() => props.handleNotificationCall('error')} className={classNames(classes.notificationCallButton)}>Error + Retry Message</Button>
+            <Button variant="contained" colortheme="success" onClick={() => props.handleNotificationCall('success')} className={classNames(classes.notificationCallButton)}>Success Message</Button>
           </div>
         </Widget>
       </Grid>
@@ -58,18 +58,18 @@ const NotificationsPage = ({ classes, ...props}) => (
           <Typography>Notifications are created with the help of <a href="https://github.com/fkhadra/react-toastify">react-toastify</a></Typography>
           <div className={classes.codeContainer}>
             <SyntaxHighlighter className={classes.codeComponent} language='javascript' style={docco}>{`
-  // import needed components, functions and styles
-  import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-
-  const Page = () => {
-    <div>
-      <ToastContainer />
-      <button onClick={() => toast('Toast Message')}>
-        show notification
-      </button>
-    </div>
-  };
+              // import needed components, functions and styles
+              import { ToastContainer, toast } from 'react-toastify';
+              import 'react-toastify/dist/ReactToastify.css';
+            
+              const Page = () => {
+                <div>
+                  <ToastContainer />
+                  <button onClick={() => toast('Toast Message')}>
+                    show notification
+                  </button>
+                </div>
+              };
             `}</SyntaxHighlighter>
             <Typography variant="caption">For more API information refer to the library documentation</Typography>
           </div>

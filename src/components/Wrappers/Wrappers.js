@@ -6,7 +6,7 @@ import {
   Button as ButtonBase,
 } from "@material-ui/core";
 import { useTheme, makeStyles } from "@material-ui/styles";
-import classnames from "classnames";
+import classNames from "classnames";
 
 // styles
 const useStyles = makeStyles(theme => ({
@@ -31,7 +31,7 @@ function Badge({ children, colorBrightness, color, ...props }) {
       {styledProps => (
         <BadgeBase
           classes={{
-            badge: classnames(classes.badge, styledProps.classes.badge),
+            badge: classNames(classes.badge, styledProps.classes.badge),
           }}
           {...props}
         >
@@ -105,7 +105,7 @@ function Button({ children, color, className, ...props }) {
             outlined: classes.outlined,
           }}
           {...props}
-          className={classnames(
+          className={classNames(
             {
               [classes.select]: props.select,
             },
@@ -142,7 +142,7 @@ function getFontWeight(style) {
 }
 
 function getFontSize(size, variant = "", theme) {
-  var multiplier;
+  let multiplier;
 
   switch (size) {
     case "sm":
