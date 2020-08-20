@@ -13,7 +13,7 @@ import useStyles from "./styles";
 // components
 import Header from "../Header";
 import Sidebar from "../Sidebar";
-import Forms from "../../pages/forms";
+import Forms from "../../pages/forms/Forms";
 
 // pages
 import Dashboard from "../../pages/dashboard";
