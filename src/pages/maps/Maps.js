@@ -24,7 +24,7 @@ const BasicMap = withScriptjs(
 );
 
 export default function Maps() {
-  var classes = useStyles();
+  const classes = useStyles();
 
   return (
     <div className={classes.mapContainer}>

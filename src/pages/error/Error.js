@@ -6,16 +6,12 @@ import classNames from "classnames";
 // styles
 import useStyles from "./styles";
 
-// logo
-import logo from "./logo.svg";
-
 export default function Error() {
   const classes = useStyles();
 
   return (
     <Grid container className={classes.container}>
       <div className={classes.logotype}>
-        <img className={classes.logotypeIcon} src={logo} alt="logo" />
         <Typography variant="h3" color="white" className={classes.logotypeText}>
           Ryze
         </Typography>
@@ -40,7 +36,7 @@ export default function Error() {
           But we're here to bring you back to safety
         </Typography>
         <Button
-          variant="contained"
+          variant="outlined"
           color="primary"
           component={Link}
           to="/"

@@ -19,10 +19,10 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import "font-awesome/css/font-awesome.min.css";
 
 export default function IconsPage () {
-  var classes = useStyles();
+  const classes = useStyles();
 
   // local
-  var [activeTabId, setActiveTabId] = useState(0);
+  const [activeTabId, setActiveTabId] = useState(0);
 
   return (
   <>

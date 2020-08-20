@@ -13,6 +13,7 @@ import useStyles from "./styles";
 // components
 import Header from "../Header";
 import Sidebar from "../Sidebar";
+import Forms from "../../pages/forms";
 
 // pages
 import Dashboard from "../../pages/dashboard";
@@ -56,6 +57,7 @@ function Layout(props) {
               <Route path="/app/ui/maps" component={Maps} />
               <Route path="/app/ui/icons" component={Icons} />
               <Route path="/app/ui/charts" component={Charts} />
+              <Route path="/app/ui/forms" component={Forms} />
             </Switch>
           </div>
         </>
