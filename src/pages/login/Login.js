@@ -30,12 +30,12 @@ function Login(props) {
   const userDispatch = useUserDispatch();
 
   // local
-  let [isLoading, setIsLoading] = useState(false);
-  let [error, setError] = useState(null);
-  let [activeTabId, setActiveTabId] = useState(0);
-  let [nameValue, setNameValue] = useState("");
-  let [loginValue, setLoginValue] = useState("");
-  let [passwordValue, setPasswordValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [activeTabId, setActiveTabId] = useState(0);
+  const [nameValue, setNameValue] = useState("");
+  const [loginValue, setLoginValue] = useState("");
+  const [passwordValue, setPasswordValue] = useState("");
 
   return (
     <Grid container className={classes.container}>
