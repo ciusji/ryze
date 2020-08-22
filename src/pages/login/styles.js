@@ -135,6 +135,7 @@ export default makeStyles(theme => ({
   },
   copyright: {
     marginTop: theme.spacing(4),
+    // 文本不换行，直到遇到 <br/> 为止
     whiteSpace: "nowrap",
     [theme.breakpoints.up("md")]: {
       position: "absolute",

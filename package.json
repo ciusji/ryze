@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "prettier": "^1.19.1"
   }
 }

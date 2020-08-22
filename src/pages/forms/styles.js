@@ -15,4 +15,7 @@ export default makeStyles(theme => ({
   textField: {
     borderBottomColor: theme.palette.background.light,
   },
+  submitButton: {
+    marginTop: theme.spacing(4),
+  },
 }));
