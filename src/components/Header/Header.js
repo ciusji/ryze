@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -104,6 +104,15 @@ export default function Header(props) {
   const [profileMenu, setProfileMenu] = useState(null);
   const [isSearchOpen, setSearchOpen] = useState(false);
 
+  const handleSetSearchOpen = () => {
+    setSearchOpen(!isSearchOpen);
+  };
+
+  useEffect(() => {
+    isSearchOpen && window.addEventListener('click', handleSetSearchOpen);
+    return () => window.removeEventListener('click', handleSetSearchOpen);
+  });
+
   return (
     <AppBar position="fixed" className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
@@ -139,6 +148,7 @@ export default function Header(props) {
           Ryze
         </Typography>
         <div className={classes.grow}/>
+        {/*apps search input*/}
         <div
           className={classNames(classes.search, {
             [classes.searchFocused]: isSearchOpen,
@@ -148,16 +158,19 @@ export default function Header(props) {
             className={classNames(classes.searchIcon, {
               [classes.searchIconOpened]: isSearchOpen,
             })}
-            onClick={() => setSearchOpen(!isSearchOpen)}
+            onClick={handleSetSearchOpen}
           >
-            <SearchIcon classes={{ root: classes.headerIcon }}/>
+            <SearchIcon classes={{ root: classes.headerIcon }} />
           </div>
+          {/*If true, the input element wilxl be focused during the first mount.*/}
           <InputBase
             placeholder="Search…"
             classes={{
               root: classes.inputRoot,
               input: classes.inputInput,
             }}
+            autoFocus={isSearchOpen}
+            onBlur={() => console.log(12312312313)}
           />
         </div>
         <IconButton
