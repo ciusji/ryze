@@ -54,6 +54,7 @@ const structure = [
       { label: "Charts", link: "/app/ui/charts" },
       { label: "Maps", link: "/app/ui/maps" },
       { label: "Forms", link: "/app/ui/forms" },
+      { label: "Dialog", link: "/app/ui/dialogs" },
     ],
   },
   { id: 5, type: "divider" },
