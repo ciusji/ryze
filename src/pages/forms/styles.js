@@ -16,6 +16,6 @@ export default makeStyles(theme => ({
     borderBottomColor: theme.palette.background.light,
   },
   submitButton: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(2),
   },
 }));
