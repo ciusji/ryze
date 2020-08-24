@@ -104,8 +104,10 @@ export default function Header(props) {
   const [profileMenu, setProfileMenu] = useState(null);
   const [isSearchOpen, setSearchOpen] = useState(false);
 
-  const handleSetSearchOpen = () => {
-    setSearchOpen(!isSearchOpen);
+  const handleSetSearchOpen = (event) => {
+    if (event.target.id !== 'search-app') {
+      setSearchOpen(!isSearchOpen);
+    }
   };
 
   useEffect(() => {
@@ -164,13 +166,13 @@ export default function Header(props) {
           </div>
           {/*If true, the input element wilxl be focused during the first mount.*/}
           <InputBase
+            id="search-app"
             placeholder="Search…"
             classes={{
               root: classes.inputRoot,
               input: classes.inputInput,
             }}
             autoFocus={isSearchOpen}
-            onBlur={() => console.log(12312312313)}
           />
         </div>
         <IconButton
