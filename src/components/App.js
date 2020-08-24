@@ -15,7 +15,6 @@ export default function App() {
   // global
   const { isAuthenticated } = useUserState();
 
-  // 设计的很巧妙
   return (
     <HashRouter>
       <Switch>

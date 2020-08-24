@@ -23,10 +23,6 @@ function reducer(state, action) {
 export default function Forms() {
   const classes = useStyles();
 
-  // useState 保存状态
-  // 与在类中使用 setState 的异同点：
-  // - 相同点：在一次渲染周期中调用多次 setState，数据只改变一次
-  // - 不同点：类中的 setState 是合并，而函数组件中的 setState 是替换
   const [count, setCount] = React.useState(0);
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -57,7 +53,6 @@ export default function Forms() {
   useEffect(() => {
     window.addEventListener('click', handleClick);
 
-    // 生命周期结束后，进行移除注册事件等操作。(组件被销毁时，会自动执行这个函数)
     return () => {
       window.removeEventListener('click', handleClick);
       document.title = "Ryze";
@@ -66,7 +61,6 @@ export default function Forms() {
 
   const [state, dispatch] = React.useReducer(reducer, initialState, undefined);
 
-  // 演示不用 form 的方式
   return (
     <>
       <PageTitle title="Forms" />

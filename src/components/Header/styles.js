@@ -8,6 +8,7 @@ export default makeStyles(theme => ({
     marginRight: theme.spacing(2.5),
     fontWeight: 500,
     fontSize: 18,
+    // the text would not linefeed until the  HTML tag is `<br/>`
     whiteSpace: "nowrap",
     [theme.breakpoints.down("xs")]: {
       display: "none",
