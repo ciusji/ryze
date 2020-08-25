@@ -11,6 +11,10 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import { AccountCircle, Security } from "@material-ui/icons";
+import Checkbox from "@material-ui/core/Checkbox";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Switch from "@material-ui/core/Switch";
+import Slider from "@material-ui/core/Slider";
 
 // styles
 import useStyles from "./styles";
@@ -44,17 +48,17 @@ export default function Forms() {
   };
 
   const handleSetUsername = (event) => {
-    console.log("Username: " + event.target.value);
     setUsername(event.target.value);
   };
 
   const handleSetPassword = (event) => {
-    console.log("Password: " + event.target.value);
     setPassword(event.target.value);
   };
 
   const handleClick = () => {
-    console.log("%s, %s", username, password);
+    if (!!username && !!password) {
+      console.log("%s, %s", username, password);
+    }
   };
 
   const handleClickSubmit = () => {
@@ -67,11 +71,7 @@ export default function Forms() {
 
   const handleClickClose = () => {
     setIsSubmit(false);
-  }
-
-  useEffect(() => {
-    document.title = count.toString();
-  }, [count]);
+  };
 
   useEffect(() => {
     window.addEventListener('click', handleClick);
@@ -94,7 +94,6 @@ export default function Forms() {
       <Button variant={"contained"} color={"primary"} onClick={handleSetCount}>Click Me</Button>
       <br/>
       <TextField
-        id={"username"}
         label={"Username"}
         onChange={handleSetUsername}
         InputProps={{
@@ -109,11 +108,9 @@ export default function Forms() {
           ),
         }}
         margin="normal"
-
       />
       <br/>
       <TextField
-        id={"password"}
         label={"Password"}
         onChange={handleSetPassword}
         InputProps={{
@@ -138,6 +135,63 @@ export default function Forms() {
           setPage(value);
         }}
       />
+      <FormControlLabel
+        label={"1"}
+        control={
+          <Checkbox
+            color="primary"
+            onChange={(event) => {
+              if (event.target.checked) {
+                console.log(event.target.value);
+              }
+            }}
+          />
+        }
+        value={1}
+      />
+      <FormControlLabel
+        label={"2"}
+        control={
+          <Checkbox
+            color="primary"
+            onChange={(event) => {
+              if (event.target.checked) {
+                console.log(event.target.value);
+              }
+            }}
+          />
+        }
+        value={2}
+      />
+      <br/>
+      <FormControlLabel
+        label={"enable"}
+        control={
+          <Switch
+            color={"primary"}
+            value={1}
+            onChange={(event) => {
+              if (event.target.checked) {
+                console.log(event.target.value);
+              }
+            }}
+          />
+        }
+      />
+      <br/>
+      <Slider
+        className={classes.sliderWidth}
+        defaultValue={30}
+        marks
+        min={0}
+        max={100}
+        step={10}
+        valueLabelDisplay={"auto"}
+        onChange={(event, value) => {
+          console.log(value);
+        }}
+      />
+      <br/>
       <Button
         className={classes.submitButton}
         type={"submit"}

@@ -18,4 +18,7 @@ export default makeStyles(theme => ({
   submitButton: {
     marginTop: theme.spacing(2),
   },
+  sliderWidth: {
+    width: 500,
+  }
 }));
