@@ -7,6 +7,7 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import PersonIcon from '@material-ui/icons/Person';
 import ListItemText from "@material-ui/core/ListItemText";
+import PropTypes from 'prop-types';
 
 // local style
 // import useStyle from "./styles";
@@ -42,4 +43,12 @@ export default function SimpleDialog(props) {
       </List>
     </Dialog>
   );
+}
+
+// func | string | bool | array | number | object
+SimpleDialog.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  selectedValue: PropTypes.string.isRequired,
+  accounts: PropTypes.array.isRequired,
 }
