@@ -14,6 +14,7 @@ import useStyles from "./styles";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
 import Forms from "../../pages/forms/Forms";
+import AppSpeedDial from "../AppSpeedDial";
 
 // pages
 import Dashboard from "../../pages/dashboard";
@@ -62,6 +63,7 @@ function Layout(props) {
               <Route path="/app/ui/dialogs" component={Dialogs} />
             </Switch>
           </div>
+          <AppSpeedDial />
         </>
     </div>
   );
