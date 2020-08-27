@@ -120,6 +120,21 @@ export default function TypographyPage() {
             </div>
           </Widget>
         </Grid>
+        <Grid item xs={12} md={12}>
+          <Widget title="Text Fonts" disableWidgetMenu>
+            <div className={classes.dashedBorder}>
+              <p className={classes.textFormat1}>
+                Almost before we knew it, we had left the ground.
+              </p>
+              <p className={classes.textFormat2}>
+                Almost before we knew it, we had left the ground.
+              </p>
+              <p className={classes.textFormat3}>
+                Almost before we knew it, we had left the ground.
+              </p>
+            </div>
+          </Widget>
+        </Grid>
       </Grid>
     </>
   );

@@ -12,4 +12,16 @@ export default makeStyles(theme => ({
   text: {
     marginBottom: theme.spacing(2),
   },
+  textFormat1: {
+    fontFamily: "'Indie Flower', cursive",
+    fontSize: 50,
+  },
+  textFormat2: {
+    fontFamily: "Monoton, cursive",
+    fontSize: 50,
+  },
+  textFormat3: {
+    fontFamily: "'Pinyou Script', cursive",
+    fontSize: 50,
+  }
 }));
