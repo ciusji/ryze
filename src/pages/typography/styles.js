@@ -21,7 +21,7 @@ export default makeStyles(theme => ({
     fontSize: 50,
   },
   textFormat3: {
-    fontFamily: "'Pinyou Script', cursive",
+    fontFamily: "'Orbitron', sans-serif",
     fontSize: 50,
   }
 }));

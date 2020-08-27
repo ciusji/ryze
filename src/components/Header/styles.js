@@ -13,6 +13,8 @@ export default makeStyles(theme => ({
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },
+    // fontFamily: "Monoton, cursive",
+    fontFamily: "'Orbitron', sans-serif",
   },
   appBar: {
     width: "100vw",
