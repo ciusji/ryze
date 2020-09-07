@@ -46,7 +46,7 @@ You can start by cloning the latest version of React Dashboard on your
 local machine by running:
 
 ```shell
-$ git clone https://github.com/flatlogic/react-material-admin.git app
+$ git clone git@github.com:ciusji/ryze.git app
 $ cd app
 ```
 
