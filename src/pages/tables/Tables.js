@@ -34,7 +34,7 @@ export default function Tables() {
   return (
     <>
       <PageTitle title="Tables" />
-      <Grid container spacing={4}>
+      <Grid container spacing={4} style={{minWidth: 100}}>
         <Grid item xs={12}>
           <MUIDataTable
             title="Employee List"
